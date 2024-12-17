@@ -25,9 +25,31 @@ function displayBook() {
     const removeBtn = document.createElement("button");
     removeBtn.innerText = "Remove Book";
     removeBtn.className = "remove-btn";
+    
+    //create checkbox container
+    const checkBoxEl=document.createElement('div')
+    
+    //read checkbox
+    const readLabelEl = document.createElement("label");
+    const readEl = document.createElement("input");
 
+
+    readLabelEl.innerText = "Read";
+
+    readEl.type = "checkBox";
+    readEl.className = "read-box";
+
+    //lable class
+    readLabelEl.className = "read-label";
+
+    //append child to div
+    checkBoxEl.appendChild(readLabelEl);
+    checkBoxEl.appendChild(readEl)
+    //append child
     libraryEl.appendChild(bookCard);
     bookCard.appendChild(removeBtn);
+    bookCard.appendChild(checkBoxEl)
+
 
     removeBtn.addEventListener("click", () => {
       Library.splice(index, 1);
