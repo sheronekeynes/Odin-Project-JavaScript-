@@ -1,0 +1,334 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/*body*/
+
+body {
+        font-family: 'Press Start 2P', sans-serif;
+        height: 100vh;
+        background-color:  #E7E8D1;
+        position: relative;
+    
+    }
+      
+
+
+
+/*Nav bar design*/
+
+.top-section{
+    display:flex;
+    justify-content: space-between;
+    padding:1.5em 1em;
+    background-color:#7e685A;
+    color:#e5eaf5;
+}
+
+
+
+.gear-icon{
+    font-size:1.5em;
+    padding-right:0.7em;
+    height: 3rem;
+    color: #a28089;
+    cursor: pointer;
+    transform-origin: center; /* Rotate around its center */
+    transition: transform 0.2s ease-in-out;
+   
+}
+
+
+/*add blur*/ 
+.blur{
+    filter:blur(5px);
+    pointer-events:none;
+
+} 
+
+
+/*ask name design*/
+
+.ask-name{
+    display:flex ; 
+    flex-direction:column;
+    width:20rem;
+    height: 20rem;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    background-color:#5a5560;
+    color:#9d8d8f;
+    border-radius: 2rem;
+    position: absolute;
+    z-index:999;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.command{
+    padding:1rem;
+}
+
+.player1-name{
+    padding:1rem;
+
+   
+}
+
+.ask-name input{
+    margin:0rem 1rem;
+    border:none;
+    padding:0.3rem;
+    border-radius:0.6rem;
+    width:80%;
+}
+
+.player2-name{
+    padding:1rem;
+}
+
+.start{
+    margin:1em;
+    padding:1em;
+    cursor: pointer;
+    border:none;
+    border-radius:1em;
+    background-color:#d0b49f;
+    color:#523a28;
+    font-weight:500;
+    font-size:0.7em;
+    font-family:'Press Start 2P', sans-serif;
+}
+
+/*winner display design*/
+
+.player-win{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin:2em 1em; 
+    background-color:#b5a4a3;
+    color:#e9e6e2;
+    padding:2em;
+    border-radius:2em;
+    text-align: center;
+ 
+    position:relative;
+    left:50%;
+    top:5%;
+    margin-top:4.5em;
+    transform: translate(-50%,-50%);
+
+}
+
+
+/*gameboard design*/
+.main-container{
+    position: relative;
+}
+
+.gameboard-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:20rem;
+    height:20rem;
+    margin:2em;
+    margin-top:3em;
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform: translate(-50%,-50%);
+    gap:0.2em;
+}
+
+.cell{
+    display: flex;
+    background-color:#A7BEAE ;
+    justify-content: center;
+    align-items: center;
+    border:dashed;
+    border-color: #EDF4F2;
+    border-radius:1em;
+    font-size:1.5em;
+    color:#73605B;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.6);
+    width:5em;
+    height:5em;
+}
+
+
+/*player display*/
+
+.player-display{
+
+    margin-top:1em;
+    margin-left:4.5em;
+    margin-right:4.5em;
+    margin-bottom:2em;
+    display: flex;
+    justify-content:space-between;
+    white-space: nowrap;
+
+
+   
+}
+
+.player1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.player-variablex{
+    background-color:#D8C3A5;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:whitesmoke;
+
+}
+
+.player1 h1{
+  font-size:1.3em;
+
+  color:#6E6658;
+  padding: 1em;;
+}
+
+.player1-name span{
+
+    color:#D6536D;
+
+}
+
+/*player 2 display*/
+
+.player2{
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.player-variableo{
+    background-color:#D8C3A5;
+    border-radius: 50%;
+    height:3em;
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:whitesmoke;     
+
+}
+
+.player2 h1{
+    font-size:1.3em;
+    color:#6E6658;
+    padding:1em;
+}
+
+.player2-name span{
+
+    color:#E43D12;
+
+}
+
+
+/*hover effect*/
+.cell:hover{
+    background-color: rgba(0,255,0,.1);
+}
+
+
+.gear-icon.active{
+    transform: scale(1.2);
+}
+
+.start:hover{
+    background-color: rgba(255,255,255,.5);
+    color:#eeede7;
+}
+/*setting menu*/
+
+.settings-menu{
+    display:none;
+    flex-direction: column;
+    background-color:#9D8D8F;
+    position: absolute;
+    top:3rem;
+    right:1rem;
+    padding:1rem;
+    margin:1rem;
+    border-radius: 1rem;
+}
+
+.settings-menu p{
+    padding:0.5rem;
+}
+
+.settings-menu p:hover{
+    color:#5A5560;
+}
+
+
+/*medium devices*/
+
+@media (max-width:768px){
+
+
+    .heading{
+        font-size:1em;
+    }
+
+
+    .gameboard-container{
+        
+        position:relative;
+        top:30%;
+        margin-top:12rem;
+
+
+    }
+
+
+    .player1{
+        display: flex;
+        justify-content: center;
+        margin:auto;
+        align-items: center;
+
+    }
+
+    .player-display{
+        display: flex;
+        white-space: nowrap;
+        justify-content:center;
+        margin:2em auto 0;
+        position: relative;
+        bottom:-20%;
+        font-size:0.7em;
+     
+
+    }
+
+
+
+
+    }

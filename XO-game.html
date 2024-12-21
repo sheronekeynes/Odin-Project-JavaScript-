@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="XO-game.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Menu section-->
+    <nav class="top-section">
+      <h1 class="heading">TIC-TAC-TOE</h1>
+
+      <div class="settings-contianer">
+        <i class="fa-solid fa-gear gear-icon" id="gear-icon"></i>
+
+        <div class="settings-menu" id="settings-menu">
+          <p id="restart">Restart</p>
+        </div>
+      </div>
+    </nav>
+
+    
+
+    <!--module to ask players name-->
+    <div class="ask-name" id="ask-name">
+      <label class="command">Enter your names:</label>
+      <label class="player1-name">Player1:</label>
+      <input type="text" id="user1" value="" />
+      <label for="player2-name" class="player2-name">Player2:</label>
+      <input type="text" id="user2" value="" />
+      <button class="start" id="start">Start</button>
+    </div>
+
+ <!--temp-->
+    
+<!-- Game and other content (blurred) -->
+<div class="content-container" id="content-container">
+        <!--to display winner-->
+        <div class="player-win" id="player-win"></div>
+        <!--game board -->
+        <div class="gameboard-container" id="gameboard-container">
+        <div class="cell" id="zero" data-index="0"></div>
+        <div class="cell" id="one" data-index="1"></div>
+        <div class="cell" id="two" data-index="2"></div>
+        <div class="cell" id="three" data-index="3"></div>
+        <div class="cell" id="four" data-index="4"></div>
+        <div class="cell" id="five" data-index="5"></div>
+        <div class="cell" id="six" data-index="6"></div>
+        <div class="cell" id="seven" data-index="7"></div>
+        <div class="cell" id="eight" data-index="8"></div>
+        </div>
+
+        <!--player display container-->
+
+        <div class="player-display">
+        <div class="player1">
+            <div class="player-variablex" id="player-variablex">X</div>
+            <h1 class="player1-name">Player: <span>Luffy</span></h1>
+        </div>
+
+        <div class="player2">
+            <div class="player-variableo" id="player-variableo">O</div>
+            <h1 class="player2-name">Player: <span>SAM</span></h1>
+        </div>
+        </div>
+ </div>  
+
+    <script src="XO-game.js"></script>
+  </body>
+</html>
